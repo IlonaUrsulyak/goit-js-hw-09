@@ -38,8 +38,8 @@ refs.button.addEventListener('click', startTime);
 function startTime(e) {
     e.preventDefault();
     timerIntervalId = setInterval(() => {
-       let deltaTime = userDate - Date.now();
-        if( deltaTime < 0) {
+       const deltaTime = userDate - Date.now();
+        if(deltaTime < 0) {
             clearInterval(timerIntervalId);
             return;
         }
